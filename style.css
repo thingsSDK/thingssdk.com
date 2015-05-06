@@ -1,0 +1,9 @@
+h1, h2, p, footer {
+	margin: 50px;
+	text-align: center;
+}
+
+ul {
+	width: 50%;
+	margin:auto;
+}
