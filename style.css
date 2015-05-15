@@ -7,3 +7,9 @@ ul {
 	width: 50%;
 	margin:auto;
 }
+
+h1 {
+	height: 150px;
+	background: url(logo.svg) 50% no-repeat;
+	text-indent: -9999px;
+}
