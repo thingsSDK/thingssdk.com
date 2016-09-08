@@ -1,15 +1,33 @@
-h1, h2, h3, p, footer {
-	margin: 50px;
-	text-align: center;
+.navbar-logo {
+	height: 2.5em;
 }
 
-ul {
-	width: 50%;
-	margin:auto;
+.navbar-default {
+	height: 5em;
+	background: white;
+	border: 0px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+header {
+	text-align: center;
+	color: white;
+	height: 25em;
+	padding-top: 9em;
+	background: maroon;
 }
 
 h1 {
-	height: 150px;
-	background: url(logo.svg) 50% no-repeat;
-	text-indent: -9999px;
+	font-size: 4em;
+}
+
+.subtitle {
+	font-size: 1.5em;
+	padding-top: 1em;
+}
+
+.inner-container {
+	padding: 1em;
+	margin: auto;
+	max-width: 60em;
 }
