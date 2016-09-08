@@ -17,6 +17,10 @@ header {
 	background: maroon;
 }
 
+section {
+	margin: 2em 0;
+}
+
 h1 {
 	font-size: 4em;
 }
@@ -27,7 +31,48 @@ h1 {
 }
 
 .inner-container {
-	padding: 1em;
+	padding: 2em 1em;
 	margin: auto;
-	max-width: 60em;
+	max-width: 50em;
+	font-size: 1.2em;
+	color: black;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+.project-box {
+	text-align: center;
+	/*border: 1px solid lightgrey;*/
+	padding: 1em;
+}
+
+.project-box i {
+	font-size: 2em;
+	color: maroon;
+}
+
+.red-button,
+.red-button:hover {
+	text-decoration: none;
+	display: block;
+	margin: 1em;
+	padding: 0.5em;
+	border-radius: 10px;
+	border: 4px solid maroon;
+	transition: background 0.5s, color 0.5s;
+}
+
+.red-button {
+	background: maroon;
+	color: white;
+}
+
+.red-button:hover {
+	background: white;
+	color: maroon;
 }

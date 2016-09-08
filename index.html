@@ -6,6 +6,7 @@
 
 	<meta name="description" content="thingsSDK is a series of tools to help you build user friendly Internet of Things devices.">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -27,19 +28,37 @@
 
 	<div class="inner-container">
 
-		<p><strong>thingsSDK</strong>'s mission is to create a set of common APIs for Internet of Things devices in JavaScript. The APIs could be reimplemented on any embedded JavaScript runtime or even in Node.js.</p>
+		<section class="introduction">
+			<p><strong>thingsSDK</strong>'s mission is to create a set of common APIs for Internet of Things devices in JavaScript. The APIs could be reimplemented on any embedded JavaScript runtime or even in Node.js.</p>
 
-		<p>The first step is making it easy getting JavaScript on to cheap, affordable microcontrollers. Then, provide the APIs and a modern workflow.</p>
+			<p>The first step is making it easy getting JavaScript on to cheap, affordable microcontrollers. Then, provide the APIs and a modern workflow.</p>
+		</section>
 
-		<h2>Current Tools</h2>
-		<h3>Microcontrollers</h3>
-		<ul>
-			<li><a href="https://github.com/thingsSDK/flasher.js">Flasher.js</a> - a simple cross-platform app that allows you to install JavaScript runtimes (and others) to ESP8266 WiFi enabled microcontrollers</li>
-		</ul>
-		<h3>Single Board Computers</h3>
-		<ul>
-			<li><a href="https://github.com/chalkers/wifiscanner">wifiscanner</a> - used to search for nearby WiFi networks</li>
-		</ul>
+		<section class="projects">
+			<div class="row row-eq-height">
+				<div class="col-md-4 project-box">
+					<i class="fa fa-usb" aria-hidden="true"></i>
+					<h2>Flasher.js</h2>
+					<p>Flasher.js is a simple cross-platform app that allows you to install JavaScript runtimes (and others) to ESP8266 WiFi enabled microcontrollers.</p>
+					<a href="https://github.com/thingsSDK/flasher.js" class="red-button">Repo</a>
+				</div>
+
+				<div class="col-md-4 project-box">
+					<i class="fa fa-wifi" aria-hidden="true"></i>
+					<h2>wifiscanner</h2>
+					<p>wifiscanner is used to search for nearby WiFi networks on single board computers.</p>
+					<a href="https://github.com/thingsSDK/flasher.js" class="red-button">Repo</a>
+				</div>
+
+				<div class="col-md-4 project-box">
+					<i class="fa fa-terminal" aria-hidden="true"></i>
+					<h2>CLI</h2>
+					<p>CLI is a command line utility for generating and managing modern projects for JavaScript microcontroller runtimes.</p>
+					<a href="https://github.com/thingsSDK/flasher.js" class="red-button">Repo</a>
+				</div>
+			</div>
+		</section>
+
 		<h2>Planned Tools</h2>
 		<ul>
 			<li>A WiFi manager for creating adhoc networks and connecting to other networks</li>
