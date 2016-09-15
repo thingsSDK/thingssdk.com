@@ -1,127 +1,157 @@
 body {
-	font-family: 'Playfair Display', Times, Baskerville, Georgia, serif;
-}
-
-.navbar-logo {
-	height: 2.5em;
+    font-family: 'Playfair Display', Times, Baskerville, Georgia, serif;
+    background: #C0B283;
+    font-size: 1.5rem;
 }
 
 .navbar-default {
-	height: 5em;
-	background: white;
-	border: 0px;
-	box-shadow: 0 0 10px rgba(55,55,55,0.5);
+    background: white;
+    border: none;
+    height: 6rem;
+    box-shadow: 0 0 10px rgba(55, 55, 55, 0.5);
 }
 
-header, footer {
-	text-align: center;
-	background: #C0B283;
-	color: white;
-	position: fixed;
-	left: 0;
-	right: 0;
+.navbar-brand {
+    padding: 1rem;
+}
+
+.navbar-logo {
+    height: 4rem;
+}
+
+.navbar-logo .navbar-logo-path {
+    fill: #373737;
+    -webkit-transition: fill 0.5s;
+    transition: fill 0.5s;
+}
+
+.navbar-logo:hover .navbar-logo-path {
+    fill: #C0B283;
 }
 
 header {
-	top: 0;
-	height: 28em;
-	padding-top: 8em;
-	z-index: -2000;
+    position: fixed;
+    top: 6rem;
+    left: 0;
+    right: 0;
+    z-index: -2000;
+    text-align: center;
+    background: #C0B283;
+    color: white;
+    padding: 2rem;
 }
 
-footer {
-	bottom: 0;
-	height: 11em;
-	padding-top: 2em;
-	font-size: 1.5em;
-	z-index: -1000;
-}
-
-footer p {
-	padding: 1em;
-}
-
-footer a,
-footer a:link,
-footer a:hover,
-footer a:active,
-footer a:visited {
-	text-decoration: underline;
-	color: white;
-}
-
-section {
-	margin: 2em 0;
+header p {
+    font-size: 2rem;
 }
 
 h1 {
-	height: 150px;
-	background: url(logo_white.svg) 50% no-repeat;
-	text-indent: -9999px;
+    height: 15rem;
+    background: url(logo_white.svg) 50% no-repeat;
+    text-indent: -9999px;
 }
 
-h2 {
-	margin-top: 0;
+.outer-content-container {
+    position: relative;
+    margin-top: 35rem;
+    background: white;
+    box-shadow: 0 0 10px rgba(55, 55, 55, 0.5);
 }
 
-.subtitle {
-	font-size: 1.5em;
-	padding-top: 1em;
+.inner-content-container {
+    margin: auto;
+    max-width: 70rem;
+		padding: 3rem;
 }
 
-.outer-container {
-	margin: 28em 0 14em;
-	background-color: white;
-	box-shadow: 0 0 10px rgba(55,55,55,0.5);
+section {
+    padding-bottom: 1rem;
 }
 
-.inner-container {
-	padding: 2em 1em;
-	margin: auto;
-	max-width: 50em;
-	font-size: 1.2em;
-	color: #373737;
+section h2 {
+	padding: 0 0 0.25rem 0;
+	margin: 1.5rem -1.5rem;
+	border-bottom: 1px solid #C0B283;
 }
 
 .project-box {
-	text-align: center;
-	padding: 1em;
+    position: relative;
+    text-align: justify;
 }
 
-.project-desc {
-	text-align: justify;
+.round-icon-button,
+.round-icon-button:active,
+.round-icon-button:hover,
+.round-icon-button:visited,
+.round-icon-button:link {
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    margin: 4rem;
+    border: 2px solid #C0B283;
+    font-size: 4rem;
 }
 
-.icon-button,
-.icon-button:link,
-.icon-button:hover,
-.icon-button:active,
-.icon-button:visited {
-	text-decoration: none;
-	display: inline-block;
-	margin: 0.5em;
-	padding: 0.5em 0.75em;
-	font-size: 2em;
-	border-radius: 50%;
-	border: 2px solid #C0B283;
-	transition: background 0.5s, color 0.5s;
+.round-icon-button,
+.round-icon-button:active,
+.round-icon-button:visited,
+.round-icon-button:link {
+    background: #C0B283;
+    color: white;
+    -webkit-transition: background 0.5s, color 0.5s;
+    transition: background 0.5s, color 0.5s;
 }
 
-.icon-button,
-.icon-button:link,
-.icon-button:active,
-.icon-button:visited {
-	background: white;
-	color: #C0B283;
+.round-icon-button:hover {
+    background: white;
+    color: #C0B283;
 }
 
-.icon-button:hover {
-	background: #C0B283;
-	color: white;
+footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: white;
+    background: #C0B283;
+    z-index: -1000;
 }
 
-@media screen and (max-width: 768px) {
-	.project-box {
-			border-bottom: 1px solid #F4F4F4;
-	}
+footer a,
+footer a:visited,
+footer a:link,
+footer a:active,
+footer a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.contributor-container {
+    margin: 2rem 0;
+}
+
+.contributor-link img {
+    border-radius: 50%;
+    margin: 1rem;
+    height: 8rem;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.contributor-link img:hover {
+    border-radius: 50%;
+    margin: 1rem;
+    height: 8rem;
+    -webkit-filter: none;
+    filter: none;
+}
+
+@media screen and (min-height: 40rem) and (min-width: 40rem) {
+    .outer-content-container {
+        margin-bottom: 35rem;
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 }
