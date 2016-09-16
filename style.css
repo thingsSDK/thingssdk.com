@@ -1,15 +1,157 @@
-h1, h2, h3, p, footer {
-	margin: 50px;
-	text-align: center;
+body {
+    font-family: 'Playfair Display', Times, Baskerville, Georgia, serif;
+    background: #C0B283;
+    font-size: 1.5rem;
 }
 
-ul {
-	width: 50%;
-	margin:auto;
+.navbar-default {
+    background: white;
+    border: none;
+    height: 6rem;
+    box-shadow: 0 0 10px rgba(55, 55, 55, 0.5);
+}
+
+.navbar-brand {
+    padding: 1rem;
+}
+
+.navbar-logo {
+    height: 4rem;
+}
+
+.navbar-logo .navbar-logo-path {
+    fill: #373737;
+    -webkit-transition: fill 0.5s;
+    transition: fill 0.5s;
+}
+
+.navbar-logo:hover .navbar-logo-path {
+    fill: #C0B283;
+}
+
+header {
+    position: fixed;
+    top: 6rem;
+    left: 0;
+    right: 0;
+    z-index: -2000;
+    text-align: center;
+    background: #C0B283;
+    color: white;
+    padding: 2rem;
+}
+
+header p {
+    font-size: 2rem;
 }
 
 h1 {
-	height: 150px;
-	background: url(logo.svg) 50% no-repeat;
-	text-indent: -9999px;
+    height: 15rem;
+    background: url(images/logo_white.svg) 50% no-repeat;
+    text-indent: -9999px;
+}
+
+.outer-content-container {
+    position: relative;
+    margin-top: 35rem;
+    background: white;
+    box-shadow: 0 0 10px rgba(55, 55, 55, 0.5);
+}
+
+.inner-content-container {
+    margin: auto;
+    max-width: 70rem;
+		padding: 3rem;
+}
+
+section {
+    padding-bottom: 1rem;
+}
+
+section h2 {
+	padding: 0 0 0.25rem 0;
+	margin: 1.5rem -1.5rem;
+	border-bottom: 1px solid #C0B283;
+}
+
+.project-box {
+    position: relative;
+    text-align: justify;
+}
+
+.round-icon-button,
+.round-icon-button:active,
+.round-icon-button:hover,
+.round-icon-button:visited,
+.round-icon-button:link {
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    margin: 4rem;
+    border: 2px solid #C0B283;
+    font-size: 4rem;
+}
+
+.round-icon-button,
+.round-icon-button:active,
+.round-icon-button:visited,
+.round-icon-button:link {
+    background: #C0B283;
+    color: white;
+    -webkit-transition: background 0.5s, color 0.5s;
+    transition: background 0.5s, color 0.5s;
+}
+
+.round-icon-button:hover {
+    background: white;
+    color: #C0B283;
+}
+
+footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: white;
+    background: #C0B283;
+    z-index: -1000;
+}
+
+footer a,
+footer a:visited,
+footer a:link,
+footer a:active,
+footer a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.contributor-container {
+    margin: 2rem 0;
+}
+
+.contributor-link img {
+    border-radius: 50%;
+    margin: 1rem;
+    height: 8rem;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.contributor-link img:hover {
+    border-radius: 50%;
+    margin: 1rem;
+    height: 8rem;
+    -webkit-filter: none;
+    filter: none;
+}
+
+@media screen and (min-height: 40rem) and (min-width: 40rem) {
+    .outer-content-container {
+        margin-bottom: 35rem;
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 }
