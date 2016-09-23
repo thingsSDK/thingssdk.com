@@ -4,31 +4,6 @@ body {
     font-size: 1.5rem;
 }
 
-.navbar-default {
-    background: white;
-    border: none;
-    height: 6rem;
-    box-shadow: 0 0 10px rgba(55, 55, 55, 0.5);
-}
-
-.navbar-brand {
-    padding: 1rem;
-}
-
-.navbar-logo {
-    height: 4rem;
-}
-
-.navbar-logo .navbar-logo-path {
-    fill: #373737;
-    -webkit-transition: fill 0.5s;
-    transition: fill 0.5s;
-}
-
-.navbar-logo:hover .navbar-logo-path {
-    fill: #C0B283;
-}
-
 header {
     position: fixed;
     top: 6rem;
