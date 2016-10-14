@@ -129,7 +129,8 @@ $(function () {
     "thingssdk.com",
     "thingssdk-cli",
     "thingssdk-espruino-strategy",
-    "thingssdk-deployer"
+    "thingssdk-deployer",
+    "guides.thingssdk.com"
   ];
 
   repos
