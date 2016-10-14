@@ -73,8 +73,8 @@ section h2 {
 .round-icon-button:link {
     background: #C0B283;
     color: white;
-    -webkit-transition: background 0.5s, color 0.5s;
-    transition: background 0.5s, color 0.5s;
+    -webkit-transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s;
 }
 
 .round-icon-button:hover {
