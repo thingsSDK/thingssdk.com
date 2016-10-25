@@ -7,7 +7,7 @@ var $header = $("header"),
 /**
  * Creates a script HTML Element and appends it to the page.
  * Ideal for JSONP requests.
- * 
+ *
  * @param {string} url - URL of the JS script to include.
  */
 function createScript(url) {
@@ -18,18 +18,18 @@ function createScript(url) {
 
 /**
  * Converts a thingsSDK repo name in to a contributors API URL
- * 
+ *
  * @param {string} repo
- * @returns {string} 
+ * @returns {string}
  */
 function createContributorsURL(repo) {
   return "https://api.github.com/repos/thingsSDK/" + repo + "/contributors";
 }
 
 /**
- * Creates a script HTML Element with from a contributors API URL 
+ * Creates a script HTML Element with from a contributors API URL
  * which triggers `contributorsCallback` on completeion
- * 
+ *
  * @param {string} contributors_url
  */
 function getContributors(contributors_url) {
@@ -37,7 +37,7 @@ function getContributors(contributors_url) {
 }
 
 /**
- * Creates the Contributors secotion on the website 
+ * Creates the Contributors secotion on the website
  */
 function createContributerSection() {
   $footer.prepend("<h2>Contributors</h2>", "<div id='contributor-container' class='contributor-container'></div>");
@@ -47,7 +47,7 @@ function createContributerSection() {
 /**
  * Converts a contributor JSON object in to an HTML element and appends it to
  * the `$contributorContainer`
- * 
+ *
  * @param {object} contributor
  */
 function createAndAppendContributor(contributor) {
@@ -64,35 +64,41 @@ function createAndAppendContributor(contributor) {
 
 /**
  * Converts, aggregates contribution totals and displays them on the page.
- * 
+ *
+ * @todo Maybe add some kind of filler for the footer on Github request failure?
+ *
  * @param {object} response - response from the contributors API
  */
 function contributorsCallback(response) {
-  // Create Contributors Section if it doesn't exist yet
-  if (!$contributorContainer) {
-    createContributerSection();
+  if (response.meta.status < 400) {
+    // Create Contributors Section if it doesn't exist yet
+    if (!$contributorContainer) {
+      createContributerSection();
+    }
+
+    // Aggregate contributions
+    response.data.forEach(sumContributions);
+
+    // Sort by number of contributions
+    var sortedContributors = Object.keys(contributors).map(function (login) {
+      return Object.assign({ login: login }, contributors[login]);
+    }).sort(function (contributor, otherContributor) {
+      return otherContributor.contributions - contributor.contributions;
+    });
+
+    // Empty contributors
+    $contributorContainer.html("");
+    // Populate with updated contributors list
+    sortedContributors.forEach(createAndAppendContributor);
+  } else {
+    console.log("Unable to pull contributors from Github");
   }
-
-  // Aggregate contirbutions
-  response.data.forEach(sumContributions);
-
-  // Sort by number of contributions
-  var sortedContributors = Object.keys(contributors).map(function (login) {
-    return Object.assign({ login: login }, contributors[login]);
-  }).sort(function (contributor, otherContributor) {
-    return otherContributor.contributions - contributor.contributions;
-  });
-
-  // Empty contributors
-  $contributorContainer.html("");
-  // Populate with updated contributors list
-  sortedContributors.forEach(createAndAppendContributor);
 }
 
 /**
  * Addeds or updates the total number of contributions from a `constributor` to the
  * `contributors` object.
- * 
+ *
  * @param {object} contributor
  */
 function sumContributions(contributor) {
