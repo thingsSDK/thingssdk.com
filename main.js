@@ -136,7 +136,9 @@ $(function () {
     "thingssdk-cli",
     "thingssdk-espruino-strategy",
     "thingssdk-deployer",
-    "guides.thingssdk.com"
+    "guides.thingssdk.com",
+    "ani-matrix.thingssdk.com",
+    "wifimanager"
   ];
 
   repos
