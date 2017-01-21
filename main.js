@@ -132,6 +132,7 @@ $(function () {
   // Grab contributors for all thingsSDK repos
   const repos = [
     "flasher.js",
+    "flasher.thingssdk.com",
     "thingssdk.com",
     "thingssdk-cli",
     "thingssdk-espruino-strategy",
