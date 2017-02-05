@@ -139,6 +139,7 @@ $(function () {
     "thingssdk-deployer",
     "guides.thingssdk.com",
     "ani-matrix.thingssdk.com",
+    "wifiscanner",
     "ht16k33"
   ];
 
