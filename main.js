@@ -139,7 +139,7 @@ $(function () {
     "thingssdk-deployer",
     "guides.thingssdk.com",
     "ani-matrix.thingssdk.com",
-    "wifimanager"
+    "ht16k33"
   ];
 
   repos
