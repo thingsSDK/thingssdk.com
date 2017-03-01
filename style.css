@@ -2,6 +2,7 @@ body {
     font-family: 'Lora', Times, Baskerville, Georgia, serif;
     background: #C0B283;
     font-size: 1.5rem;
+	background-color: white; /*Added to fix above navbar weirdness*/
 }
 
 .navbar-default {
@@ -41,7 +42,6 @@ header {
     top: 6rem;
     left: 0;
     right: 0;
-    z-index: -2000;
     text-align: center;
     background: #C0B283;
     color: white;
@@ -60,7 +60,7 @@ h1 {
 
 .outer-content-container {
     position: relative;
-    margin-top: 35rem;
+    margin-top: 30rem; /*Changed from 35, so footer doesn't leak into header*/
     background: white;
     box-shadow: 0 0 10px rgba(55, 55, 55, 0.5);
 }
@@ -120,6 +120,7 @@ footer {
     color: white;
     background: #C0B283;
     z-index: -1000;
+	height: 400px; /*Changed so that "Contributers" is visible*/
 }
 
 footer a,

@@ -37,10 +37,10 @@ function getContributors(contributors_url) {
 }
 
 /**
- * Creates the Contributors secotion on the website
+ * Creates the Contributors section on the website
  */
 function createContributerSection() {
-  $footer.prepend("<h2>Contributors</h2>", "<div id='contributor-container' class='contributor-container'></div>");
+  $footer.prepend("<br><h2>Contributors</h2>", "<div id='contributor-container' class='contributor-container'></div>");
   $contributorContainer = $("#contributor-container");
 }
 
@@ -151,5 +151,16 @@ $(function () {
   // Fade header
   $(window).scroll(fadeHeaderFooter);
   $(window).bind('touchmove', fadeHeaderFooter);
-
+	
+  // Body background is white for header and beige/brown for footer
+  $(window).scroll(function () { 
+    if ($(window).scrollTop() > $("body").height() / 2) {
+      $("body").css({ 'background-color': '#C0B283' });
+      $("header").css({ 'z-index': '-2000' });
+    } 
+    else {
+      $("body").css({ 'background-color': 'white' });
+    }
+  });
+  
 });
