@@ -40,7 +40,7 @@ function getContributors(contributors_url) {
  * Creates the Contributors section on the website
  */
 function createContributerSection() {
-  $footer.prepend("<br><h2>Contributors</h2>", "<div id='contributor-container' class='contributor-container'></div>");
+  $footer.prepend("<h2>Contributors</h2>", "<div id='contributor-container' class='contributor-container'></div>");
   $contributorContainer = $("#contributor-container");
 }
 
